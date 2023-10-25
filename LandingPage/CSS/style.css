@@ -1,0 +1,453 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/*Barra de menú*/
+header{
+    width: 100%;
+    height: 70px;
+    /* para que la navegación este sobre el contenido siempre, fijar la posición*/
+    position: fixed;
+    /* Posicion fija */
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.07s;
+    padding: 10px 30px;
+    z-index:10;
+    box-shadow: 0 4px 25px -22px black;
+    background-color: #1092de;
+}
+
+.navegacion{
+    /* Para poner el logo a un lado y el menu al otro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.menu{
+    height: 60px;
+}
+.menu > li > a{
+    display: block;
+    padding: 8px 12px;
+    color: #1a0be6;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: "Open sans";
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: black;
+    transition: all .3s;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* submenu */
+
+.submenu{
+    position: absolute;
+    background: rgba(0, 140, 255, 0.823);
+    width: 85%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    font-size: 15px;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    font-family: "Open sans";
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*Fin del Menu*/
+
+/*Insignia*/
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/*User*/
+
+.user-badge {
+    position: absolute; /* Posición absoluta para superponerlo */
+    top: 120px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 170px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    background-color: hwb(0 100% 0%); /* Fondo blanco (puedes cambiarlo) */
+    padding: 5px; /* Espaciado interno alrededor del cuadradito */
+    border: 1px solid #000000; /* Borde (puedes personalizarlo) */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.user-badge img {
+    width: 60px; /* Tamaño de la imagen del usuario (ajusta según necesites) */
+    height: 60px; /* Tamaño de la imagen del usuario (ajusta según necesites) */
+    border-radius: 70%; /* Hacer la imagen circular (opcional) */
+}
+
+/* Portada */
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position:relative;
+    margin-top:70px;
+    background-image: url(../img/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(101, 97, 97, 0.585),rgba(139, 136, 136, 0.71));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.container-info-cover h1{
+    font-size: 40px;
+    font-weight: 500;
+    color:rgb(243, 237, 237);
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container-info-cover p{
+    color: #110d0d;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+
+/*Fin de la Bienvenida*/
+
+.image2{
+    text-align: center;
+}
+
+.img2{
+    width: 100%;
+    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+    height: 30rem; /* Altura automática para mantener la proporción */ 
+}
+
+/* mensaje del director contenerdor de bienvenida*/
+.acerca-de{
+    width: 100%;
+    padding: 30px;
+    margin-top: none;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.acerca-de .left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.acerca-de .info{
+    width: 100%;
+    padding: 0px 30px;
+}
+
+
+.acerca-de .info h2{
+    margin: 50px;
+    font-size: 40x;
+    color: #000000;
+}
+
+
+.tamaño-letra{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:flex;
+    font-size: 20px;
+}
+
+/* Modifica el centrado y tamaño del titulo de Sobre Nosotros */
+.Nosotros{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: rgba(3, 3, 3, 0.897);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Modifica el tamaño y color del texto */
+.info{
+    display:flex;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+
+.Mensaje{
+    padding-left: 40px ;
+}
+
+
+.Mensaje_tamaño{
+    font-size: 22px;
+}
+
+.acerca-img{
+    margin: 50px;
+}
+
+/*Reseña*/
+#reseña{
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+}
+#img1{
+    border-style:solid;
+    border-color:#6A1B9A;
+    width:400px;
+    border-radius:80px;
+}
+
+/*Nuestro colegio*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: center; 
+    max-width:950px;
+    margin: 0 auto;
+    margin-bottom:30px;
+    text-align: center;
+  }
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 400px;
+    margin: 10px auto; 
+    padding:20px;
+    text-align: left;
+    font-size: 18px;
+}
+  
+  .fondcouleur {  
+      background-color: silver;
+  }
+
+  /*Cards*/
+  h2{
+    text-align: center;
+    font-size: 40px;
+  }
+  .card-stripe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .card {
+    background: white;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 25px;
+    text-align: center;
+    width: calc(33% - 40px); /* width for 3 cards is 33%, but need to take the margin into account, 20px on the left, 20px on the right = 40px; */
+  }
+  
+  .card__image {
+    border-radius: 50%; /* makes the image a circle */
+  }
+  
+  .card h2 {
+    text-transform: uppercase;
+  }
+  
+  a.btn {
+    text-decoration: none;
+    color: #FFF;
+    background: red;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 50px;
+  }
+
+/*Site Footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #19a2f1;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    margin-right: 80px; /* Añade un margen derecho para separar de la columna del logo */
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%; /* Asegura que la imagen se ajuste al ancho de su contenedor */
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #fffbfb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+p {
+    text-transform: none;
+    font-weight: bold;
+}
