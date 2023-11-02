@@ -1,0 +1,113 @@
+//Comandos Utilizados
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt install apache2 - Instalar el servidor web Apache.
+    4  sudo apt install mysql-server - Instalar el servidor MySQL. 
+    5  sudo apt install mysql-server
+    6  sudo systemctl start mysql
+    7  sudo systemctl enable mysql
+    8  sudo apt install phpmyadmin php-mbstring - Instalar PHPMyAdmin
+    9  sudo apt install nodejs - Instalar Node.js.
+   10  sudo apt install npm - Instalar el administrador de paquetes NPM.
+   11  node -v
+   12  npm -v
+   13  sudo mkdir -p /var/run/mysqld
+   14  sudo chown mysql:mysql /var/run/mysqld
+   15  sudo service mysql start
+   16  mysql -u root
+   17  sudo mysql -u root
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '1234';
+	FLUSH PRIVILEGES;
+	exit;
+   18  mysql -u root -p
+	CREATE DATABASE dbRestaurante;
+	USE dbRestaurante;
+
+	CREATE TABLE PEDIDO (
+      IDPED INT AUTO_INCREMENT,
+      USERPED VARCHAR(80),
+      EMAUSPED VARCHAR(80),
+      CELUSPED CHAR(9),
+      FOODPED VARCHAR(80),
+      MSGPED VARCHAR(250),
+      PRIMARY KEY (IDPED)
+   );
+
+	INSERT INTO PEDIDO (USERPED, EMAUSPED, CELUSPED, FOODPED, MSGPED)
+VALUES
+    ('Usuario1', 'usuario1@example.com', '123456789', 'Comida1', 'Mensaje1'),
+    ('Usuario2', 'usuario2@example.com', '987654321', 'Comida2', 'Mensaje2');
+
+	exit;
+
+    19    mkdir NodeConeccion
+    20  ls
+    21  cd NodeConeccion/
+    22  npm init -y
+    23  ls
+    24  npm install express
+    25  ls
+    26  npm install mysql
+    27  npm install express
+    28  code package.json
+	{
+  "name": "NodeConeccion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "node connect.js"	
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+    29  nano connect.js
+const express = require('express');
+const mysql = require('mysql');
+const cors = require('cors');
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+// Configuración de la conexión a la base de datos
+const dbConfig = {
+  host: 'localhost',  // Cambia esto por la dirección de tu base de datos
+  user: 'root',       // Cambia esto por tu nombre de usuario
+  password: '1234',   // Cambia esto por tu contraseña
+  database: 'dbRestaurante' // Cambia esto por el nombre de tu base de datos
+};
+
+// Crear una conexión a la base de datos
+const connection = mysql.createConnection(dbConfig);
+
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a la base de datos:', err);
+    return;
+  }
+  console.log('Conexión exitosa a la base de datos');
+});
+
+// Aquí puedes realizar consultas o acciones en la base de datos
+
+// Cerrar la conexión cuando hayas terminado
+connection.end((err) => {
+  if (err) {
+    console.error('Error al cerrar la conexión a la base de datos:', err);
+    return;
+  }
+  console.log('Conexión a la base de datos cerrada');
+});
+    30  npm install cors
+    31  node connect.js
+    32  nano connect.js
+    33  node connect.js
+    34  history
+
+	
+ 
+
+	
