@@ -1,0 +1,207 @@
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  clear
+    4  mkdir consulta
+    5  ls
+    6  cd consulta/
+    7  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash 
+    8  sudo apt-get install -y nodejs
+    9  clear
+   10  node --v
+   11  node -v
+   12  npm -v
+   13  clear
+   14  npminit -y
+   15  npm init -y
+   16  npm i mysql
+   17  nano app.js
+   18  npm i express
+   19  ls
+   20  nano app.js 
+   21  sudo apt install mysql-server
+   22  clear
+   23  sudo systemctl start mysql
+   24  sudo systemctl enable mysql
+   25  sudo mysql -u root
+   26  mysql -u root -p
+   27  nano app.js 
+   28  history
+   29  nano app.js 
+   30  node app.js
+   31  nano app.js 
+   32  node app.js
+   33  nano app.js 
+   34  node app.js
+   35  mysql -u root -p
+	
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '1234';
+	FLUSH PRIVILEGES;
+	exit;
+
+	mysql -u root -p
+	DROP SCHEMA IF EXISTS sakila;
+	CREATE SCHEMA sakila;
+	USE sakila;	
+
+CREATE TABLE actor (
+  actor_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(45) NOT NULL,
+  last_name VARCHAR(45) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY  (actor_id),
+  KEY idx_actor_last_name (last_name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO actor VALUES (1,'PENELOPE','GUINESS','2006-02-15 04:34:33'),
+(2,'NICK','WAHLBERG','2006-02-15 04:34:33'),
+(3,'ED','CHASE','2006-02-15 04:34:33'),
+(4,'JENNIFER','DAVIS','2006-02-15 04:34:33'),
+(5,'JOHNNY','LOLLOBRIGIDA','2006-02-15 04:34:33'),
+(6,'BETTE','NICHOLSON','2006-02-15 04:34:33'),
+(7,'GRACE','MOSTEL','2006-02-15 04:34:33'),
+(8,'MATTHEW','JOHANSSON','2006-02-15 04:34:33'),
+(9,'JOE','SWANK','2006-02-15 04:34:33'),
+(10,'CHRISTIAN','GABLE','2006-02-15 04:34:33'),
+(11,'ZERO','CAGE','2006-02-15 04:34:33'),
+(12,'KARL','BERRY','2006-02-15 04:34:33'),
+(13,'UMA','WOOD','2006-02-15 04:34:33'),
+(14,'VIVIEN','BERGEN','2006-02-15 04:34:33'),
+(15,'CUBA','OLIVIER','2006-02-15 04:34:33'),
+(16,'FRED','COSTNER','2006-02-15 04:34:33'),
+(17,'HELEN','VOIGHT','2006-02-15 04:34:33'),
+(18,'DAN','TORN','2006-02-15 04:34:33'),
+(19,'BOB','FAWCETT','2006-02-15 04:34:33'),
+(20,'LUCILLE','TRACY','2006-02-15 04:34:33'),
+(21,'KIRSTEN','PALTROW','2006-02-15 04:34:33'),
+(22,'ELVIS','MARX','2006-02-15 04:34:33'),
+(23,'SANDRA','KILMER','2006-02-15 04:34:33'),
+(24,'CAMERON','STREEP','2006-02-15 04:34:33'),
+(25,'KEVIN','BLOOM','2006-02-15 04:34:33'),
+(26,'RIP','CRAWFORD','2006-02-15 04:34:33'),
+(27,'JULIA','MCQUEEN','2006-02-15 04:34:33'),
+(28,'WOODY','HOFFMAN','2006-02-15 04:34:33'),
+(29,'ALEC','WAYNE','2006-02-15 04:34:33'),
+(30,'SANDRA','PECK','2006-02-15 04:34:33'),
+(31,'SISSY','SOBIESKI','2006-02-15 04:34:33'),
+(32,'TIM','HACKMAN','2006-02-15 04:34:33'),
+(33,'MILLA','PECK','2006-02-15 04:34:33'),
+(34,'AUDREY','OLIVIER','2006-02-15 04:34:33'),
+(35,'JUDY','DEAN','2006-02-15 04:34:33'),
+(36,'BURT','DUKAKIS','2006-02-15 04:34:33'),
+(37,'VAL','BOLGER','2006-02-15 04:34:33'),
+(38,'TOM','MCKELLEN','2006-02-15 04:34:33'),
+(39,'GOLDIE','BRODY','2006-02-15 04:34:33'),
+(40,'JOHNNY','CAGE','2006-02-15 04:34:33'),
+(41,'JODIE','DEGENERES','2006-02-15 04:34:33'),
+(42,'TOM','MIRANDA','2006-02-15 04:34:33'),
+(43,'KIRK','JOVOVICH','2006-02-15 04:34:33'),
+(44,'NICK','STALLONE','2006-02-15 04:34:33'),
+(45,'REESE','KILMER','2006-02-15 04:34:33'),
+(46,'PARKER','GOLDBERG','2006-02-15 04:34:33'),
+(47,'JULIA','BARRYMORE','2006-02-15 04:34:33'),
+(48,'FRANCES','DAY-LEWIS','2006-02-15 04:34:33'),
+(49,'ANNE','CRONYN','2006-02-15 04:34:33'),
+(50,'NATALIE','HOPKINS','2006-02-15 04:34:33'),
+(51,'GARY','PHOENIX','2006-02-15 04:34:33'),
+(52,'CARMEN','HUNT','2006-02-15 04:34:33'),
+(53,'MENA','TEMPLE','2006-02-15 04:34:33'),
+(54,'PENELOPE','PINKETT','2006-02-15 04:34:33'),
+(55,'FAY','KILMER','2006-02-15 04:34:33'),
+(56,'DAN','HARRIS','2006-02-15 04:34:33'),
+(57,'JUDE','CRUISE','2006-02-15 04:34:33'),
+(58,'CHRISTIAN','AKROYD','2006-02-15 04:34:33'),
+(59,'DUSTIN','TAUTOU','2006-02-15 04:34:33'),
+(60,'HENRY','BERRY','2006-02-15 04:34:33'),
+(61,'CHRISTIAN','NEESON','2006-02-15 04:34:33'),
+(62,'JAYNE','NEESON','2006-02-15 04:34:33'),
+(63,'CAMERON','WRAY','2006-02-15 04:34:33'),
+(64,'RAY','JOHANSSON','2006-02-15 04:34:33'),
+(65,'ANGELA','HUDSON','2006-02-15 04:34:33'),
+(66,'MARY','TANDY','2006-02-15 04:34:33'),
+(67,'JESSICA','BAILEY','2006-02-15 04:34:33'),
+(68,'RIP','WINSLET','2006-02-15 04:34:33'),
+(69,'KENNETH','PALTROW','2006-02-15 04:34:33'),
+(70,'MICHELLE','MCCONAUGHEY','2006-02-15 04:34:33'),
+(71,'ADAM','GRANT','2006-02-15 04:34:33'),
+(72,'SEAN','WILLIAMS','2006-02-15 04:34:33'),
+(73,'GARY','PENN','2006-02-15 04:34:33'),
+(74,'MILLA','KEITEL','2006-02-15 04:34:33'),
+(75,'BURT','POSEY','2006-02-15 04:34:33'),
+(76,'ANGELINA','ASTAIRE','2006-02-15 04:34:33'),
+(77,'CARY','MCCONAUGHEY','2006-02-15 04:34:33'),
+(78,'GROUCHO','SINATRA','2006-02-15 04:34:33'),
+(79,'MAE','HOFFMAN','2006-02-15 04:34:33'),
+(80,'RALPH','CRUZ','2006-02-15 04:34:33'),
+(81,'SCARLETT','DAMON','2006-02-15 04:34:33'),
+(82,'WOODY','JOLIE','2006-02-15 04:34:33'),
+(83,'BEN','WILLIS','2006-02-15 04:34:33'),
+(84,'JAMES','PITT','2006-02-15 04:34:33'),
+(85,'MINNIE','ZELLWEGER','2006-02-15 04:34:33'),
+(86,'GREG','CHAPLIN','2006-02-15 04:34:33'),
+(87,'SPENCER','PECK','2006-02-15 04:34:33'),
+(88,'KENNETH','PESCI','2006-02-15 04:34:33'),
+(89,'CHARLIZE','DENCH','2006-02-15 04:34:33'),
+(90,'SEAN','GUINESS','2006-02-15 04:34:33'),
+(91,'CHRISTOPHER','BERRY','2006-02-15 04:34:33'),
+(92,'KIRSTEN','AKROYD','2006-02-15 04:34:33'),
+(93,'ELLEN','PRESLEY','2006-02-15 04:34:33'),
+(94,'KENNETH','TORN','2006-02-15 04:34:33'),
+(95,'DARYL','WAHLBERG','2006-02-15 04:34:33'),
+(96,'GENE','WILLIS','2006-02-15 04:34:33'),
+(97,'MEG','HAWKE','2006-02-15 04:34:33'),
+(98,'CHRIS','BRIDGES','2006-02-15 04:34:33'),
+(99,'JIM','MOSTEL','2006-02-15 04:34:33'),
+(100,'SPENCER','DEPP','2006-02-15 04:34:33');
+
+
+   36  nano app.js 
+const express = require('express');
+const mysql = require('mysql');
+
+const app = express();
+const port = 3000;
+
+// Configuración de la conexión a la base de datos
+const db = mysql.createConnection({
+  host: 'localhost',  // Cambia esto al host de tu base de datos si es diferente
+  user: 'tu_usuario', // Cambia esto a tu nombre de usuario de MySQL
+  password: 'tu_contraseña', // Cambia esto a tu contraseña de MySQL
+  database: 'tu_base_de_datos', // Cambia esto a tu base de datos
+});
+
+// Conectar a la base de datos
+db.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a la base de datos: ' + err.message);
+  } else {
+    console.log('Conexión exitosa a la base de datos');
+  }
+});
+
+// Ruta para obtener todos los registros de la tabla actor
+app.get('/actors', (req, res) => {
+  const query = 'SELECT * FROM actor';
+
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Error al realizar la consulta: ' + err.message);
+      res.status(500).send('Error en el servidor');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+// Iniciar el servidor
+app.listen(port, () => {
+  console.log(`Aplicación en ejecución en http://localhost:${port}`);
+});
+
+   37  node app.js
+   38  nano app.js 
+   40  node app.js
+   41  npm i mysql
+   42  npm i express
+   43  sudo systemctl status mysql
+   44  npm run start
+   45  history
