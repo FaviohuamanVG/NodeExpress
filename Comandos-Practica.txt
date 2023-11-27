@@ -1,0 +1,38 @@
+    1  sudo apt update && sudo apt upgrade -y
+    2  sudo apt install mysql-server -y
+    3  sudo mysql
+
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'admin';: Cambia el 	método de autenticación del usuario root a 'caching_sha2_password'.
+
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';: Cambia el 	método de autenticación del usuario root a 'mysql_native_password'.
+
+    4  mysql -u root -p
+
+	CREATE USER 'favio'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';: Crea un nuevo 	usuario llamado 'favio' con la contraseña 'admin'.
+
+	GRANT ALL PRIVILEGES ON *.* TO 'favio'@'localhost' WITH GRANT OPTION;: Otorga todos los 	privilegios al usuario 'favio' en todas las bases de datos con la opción de otorgar privilegios 	a otros usuarios.
+
+	FLUSH PRIVILEGES;: Recarga los privilegios para que los cambios surtan efecto.
+
+	exit;: Sale de la interfaz de línea de comandos de MySQL.
+
+    5  curl -o- https//raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+    6  source ~/.nvm/nvm.sh
+    7  source ~/.nvm/nvm.sh
+    8  nvm install --lts
+    9  nvm install --lts
+   10  git clone https://github.com/eocares/enviar-formulario-a-Mysql-con-Nodejs.git
+   11  npm install express
+   12  ls
+   13  cd enviar-formulario-a-Mysql-con-Nodejs/
+   14  nano server.js 
+   15  nano configBD.js 
+   16  cd views/
+   17  ls
+   18  cd pages/
+   19  ls
+   20  nano form.ejs 
+   21  cd ..
+   22  cd ..
+   23  nano server.js 
+   24  node server.js 
